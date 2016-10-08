@@ -130,3 +130,740 @@ CTRL-C trapped.  Forcing immediate shutdown.
 CTRL-C trapped.  Forcing immediate shutdown.
 CTRL-C trapped.  Forcing immediate shutdown.
 <-- Wrapper Stopped
+OpenSCManager failed - 拒绝访问。 (0x5)
+OpenSCManager failed - 拒绝访问。 (0x5)
+OpenSCManager failed - 拒绝访问。 (0x5)
+The SonarQube service is not installed - 指定的服务未安装。 (0x424)
+The SonarQube service is not installed - 指定的服务未安装。 (0x424)
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2016.10.08 16:16:06 INFO  app[o.s.a.AppFileSystem] Cleaning or creating temp directory D:\01_opensource\programmes\sonarqube-5.6.3\temp
+
+WrapperSimpleApp: Encountered an error running main: java.lang.RuntimeException: Failed to reset file system
+java.lang.RuntimeException: Failed to reset file system
+	at org.sonar.process.monitor.Monitor.resetFileSystem(Monitor.java:127)
+	at org.sonar.process.monitor.Monitor.startProcesses(Monitor.java:107)
+	at org.sonar.process.monitor.Monitor.start(Monitor.java:101)
+	at org.sonar.application.App.start(App.java:54)
+	at org.sonar.application.App.main(App.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.tanukisoftware.wrapper.WrapperSimpleApp.run(WrapperSimpleApp.java:240)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.nio.file.FileSystemException: D:\01_opensource\programmes\sonarqube-5.6.3\temp\ce-exploded-plugins\csharp\META-INF\lib\gson-2.4.jar: 另一个程序正在使用此文件，进程无法访问。
+
+	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:86)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:269)
+	at sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:103)
+	at java.nio.file.Files.delete(Files.java:1126)
+	at org.sonar.process.FileUtils$DeleteRecursivelyFileVisitor.visitFile(FileUtils.java:170)
+	at org.sonar.process.FileUtils$DeleteRecursivelyFileVisitor.visitFile(FileUtils.java:165)
+	at java.nio.file.Files.walkFileTree(Files.java:2670)
+	at java.nio.file.Files.walkFileTree(Files.java:2742)
+	at org.sonar.process.FileUtils.deleteDirectoryImpl(FileUtils.java:127)
+	at org.sonar.process.FileUtils.deleteDirectory(FileUtils.java:112)
+	at org.sonar.application.AppFileSystem$CleanTempDirFileVisitor.visitFile(AppFileSystem.java:146)
+	at org.sonar.application.AppFileSystem$CleanTempDirFileVisitor.visitFile(AppFileSystem.java:131)
+	at java.nio.file.Files.walkFileTree(Files.java:2670)
+	at org.sonar.application.AppFileSystem.createOrCleanTempDirectory(AppFileSystem.java:127)
+	at org.sonar.application.AppFileSystem.reset(AppFileSystem.java:82)
+	at org.sonar.process.monitor.Monitor.resetFileSystem(Monitor.java:124)
+	... 10 more
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2016.10.08 16:16:24 INFO  app[o.s.a.AppFileSystem] Cleaning or creating temp directory D:\01_opensource\programmes\sonarqube-5.6.3\temp
+2016.10.08 16:16:24 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[es]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Xmx1G -Xms256m -Xss256k -Djava.net.preferIPv4Stack=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/search/* org.sonar.search.SearchServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process3050650280231548863properties
+2016.10.08 16:16:25 INFO   es[o.s.p.ProcessEntryPoint]  Starting es
+2016.10.08 16:16:25 INFO   es[o.s.s.EsSettings]  Elasticsearch listening on 127.0.0.1:9001
+2016.10.08 16:16:25 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] version[1.7.5], pid[1836], build[00f95f4/2016-02-02T09:55:30Z]
+2016.10.08 16:16:25 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initializing ...
+2016.10.08 16:16:25 INFO   es[o.e.plugins]  [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:16:25 INFO   es[o.elasticsearch.env]  [sonar-1475914584420] using [1] data paths, mounts [[WORK (D:)]], net usable_space [37.3gb], net total_space [156gb], types [NTFS]
+2016.10.08 16:16:27 WARN   es[o.e.bootstrap]  JNA not found. native methods will be disabled.
+2016.10.08 16:16:27 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initialized
+2016.10.08 16:16:27 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] starting ...
+2016.10.08 16:16:27 INFO   es[o.e.transport]  [sonar-1475914584420] bound_address {inet[/127.0.0.1:9001]}, publish_address {inet[/127.0.0.1:9001]}
+2016.10.08 16:16:27 INFO   es[o.e.discovery]  [sonar-1475914584420] sonarqube/ou1p0FT4QleahedftZST3A
+2016.10.08 16:16:30 INFO   es[o.e.cluster.service]  [sonar-1475914584420] new_master [sonar-1475914584420][ou1p0FT4QleahedftZST3A][Z_ZW-PC][inet[/127.0.0.1:9001]]{rack_id=sonar-1475914584420}, reason: zen-disco-join (elected_as_master)
+2016.10.08 16:16:30 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] started
+2016.10.08 16:16:31 INFO   es[o.e.gateway]  [sonar-1475914584420] recovered [6] indices into cluster_state
+2016.10.08 16:16:34 INFO  app[o.s.p.m.Monitor] Process[es] is up
+2016.10.08 16:16:34 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[web]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djruby.management.enabled=false -Djruby.compile.invokedynamic=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.server.app.WebServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process6183128260343245999properties
+2016.10.08 16:16:35 INFO  web[o.s.p.ProcessEntryPoint] Starting web
+2016.10.08 16:16:35 INFO  web[o.s.s.a.TomcatContexts] Webapp directory: D:\01_opensource\programmes\sonarqube-5.6.3\web
+2016.10.08 16:16:35 INFO  web[o.a.c.h.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:16:35 INFO  web[o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2016.10.08 16:16:36 INFO  web[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:16:40 INFO  web[o.s.s.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:16:40 INFO  web[o.s.s.d.EmbeddedDatabase] Embedded database started. Data stored in: D:\01_opensource\programmes\sonarqube-5.6.3\data
+2016.10.08 16:16:40 INFO  web[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:16:41 WARN  web[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:16:42 INFO  web[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:16:42 INFO  web[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:16:43 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin C# / 5.0 / 17ddb09047940791828dcb70c9e225f006ab11aa
+2016.10.08 16:16:43 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Git / 1.2 / a713dd64daf8719ba4e7f551f9a1966c62690c17
+2016.10.08 16:16:43 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Java / 3.13.1 / cf0f0c950ba3e83a87c7fe11c6ff7e63f4864bd9
+2016.10.08 16:16:43 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin JavaScript / 2.11 / a9b1afa9ceef7079811779d9efc5f8026acb1400
+2016.10.08 16:16:43 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin SVN / 1.3 / aff503d48bc77b07c2b62abf93249d0a20bd355c
+2016.10.08 16:16:44 INFO  web[o.s.s.p.RailsAppsDeployer] Deploying Ruby on Rails applications
+2016.10.08 16:16:44 INFO  web[o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2016.10.08 16:16:45 INFO  web[o.s.s.n.NotificationService] Notification service started (delay 60 sec.)
+2016.10.08 16:16:45 INFO  web[o.s.s.s.RegisterMetrics] Register metrics
+2016.10.08 16:16:45 INFO  web[o.s.s.r.RegisterRules] Register rules
+2016.10.08 16:16:47 INFO  web[o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2016.10.08 16:16:49 INFO  web[o.s.s.s.RegisterNewMeasureFilters] Register measure filters
+2016.10.08 16:16:49 INFO  web[o.s.s.s.RegisterDashboards] Register dashboards
+2016.10.08 16:16:49 INFO  web[o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2016.10.08 16:16:49 INFO  web[o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2016.10.08 16:16:49 INFO  web[o.s.s.e.IndexerStartupTask] Index activities
+2016.10.08 16:16:49 INFO  web[o.s.s.e.IndexerStartupTask] Index issues
+2016.10.08 16:16:49 INFO  web[o.s.s.e.IndexerStartupTask] Index tests
+2016.10.08 16:16:49 INFO  web[o.s.s.e.IndexerStartupTask] Index users
+2016.10.08 16:16:49 INFO  web[o.s.s.e.IndexerStartupTask] Index views
+2016.10.08 16:16:49 INFO  web[jruby.rack] jruby 1.7.9 (ruby-1.8.7p370) 2013-12-06 87b108a on Java HotSpot(TM) 64-Bit Server VM 1.8.0_66-b18 [Windows 7-amd64]
+2016.10.08 16:16:49 INFO  web[jruby.rack] using a shared (threadsafe!) runtime
+2016.10.08 16:17:01 INFO  web[jruby.rack] keeping custom (config.logger) Rails logger instance
+2016.10.08 16:17:01 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@dda02f2 [pattern=/sessions/init/*]
+2016.10.08 16:17:01 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@d70749 [pattern=/oauth2/callback/*]
+2016.10.08 16:17:02 INFO  web[o.a.c.h.Http11NioProtocol] Starting ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:17:02 INFO  web[o.s.s.a.TomcatAccessLog] Web server is started
+2016.10.08 16:17:02 INFO  web[o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 8888
+2016.10.08 16:17:02 INFO  app[o.s.p.m.Monitor] Process[web] is up
+2016.10.08 16:17:02 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[ce]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;./lib/ce/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.ce.app.CeServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process1345432002873161792properties
+2016.10.08 16:17:07 INFO  ce[o.s.p.ProcessEntryPoint] Starting ce
+2016.10.08 16:17:07 INFO  ce[o.s.ce.app.CeServer] Compute Engine starting up...
+2016.10.08 16:17:07 INFO  ce[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:17:07 INFO  ce[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:17:07 WARN  ce[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:17:08 INFO  ce[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:17:08 INFO  ce[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:17:09 INFO  ce[o.s.c.c.CePluginRepository] Load plugins
+2016.10.08 16:17:10 INFO  ce[o.s.s.c.q.PurgeCeActivities] Delete the Compute Engine tasks created before Mon Apr 11 16:17:10 CST 2016
+2016.10.08 16:17:10 INFO  ce[o.s.ce.app.CeServer] Compute Engine is up
+2016.10.08 16:17:11 INFO  app[o.s.p.m.Monitor] Process[ce] is up
+2016.10.08 16:21:44 INFO  web[o.s.s.p.w.RestartAction] SonarQube restart requested by admin
+2016.10.08 16:21:44 INFO  app[o.s.p.m.Monitor] Process [web] requested restart
+2016.10.08 16:21:44 INFO  app[o.s.p.m.Monitor] Process[ce] is stopping
+2016.10.08 16:21:45 INFO  ce[o.s.p.StopWatcher] Stopping process
+2016.10.08 16:21:45 INFO  ce[o.s.ce.app.CeServer] Compute Engine shutting down...
+2016.10.08 16:21:46 INFO  app[o.s.p.m.Monitor] Process[ce] is stopped
+2016.10.08 16:21:46 INFO  app[o.s.p.m.Monitor] Process[web] is stopping
+2016.10.08 16:21:47 INFO  web[o.s.p.StopWatcher] Stopping process
+2016.10.08 16:21:47 INFO  web[o.a.c.h.Http11NioProtocol] Pausing ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:21:48 INFO  web[o.s.s.n.NotificationService] Notification service stopped
+2016.10.08 16:21:48 INFO  web[o.s.s.d.EmbeddedDatabase] Embedded database stopped
+2016.10.08 16:21:48 INFO  web[o.a.c.h.Http11NioProtocol] Stopping ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:21:49 INFO  web[o.a.c.h.Http11NioProtocol] Destroying ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:21:49 INFO  web[o.s.s.a.TomcatAccessLog] Web server is stopped
+2016.10.08 16:21:49 INFO  app[o.s.p.m.Monitor] Process[web] is stopped
+2016.10.08 16:21:49 INFO  app[o.s.p.m.Monitor] Process[es] is stopping
+2016.10.08 16:21:50 INFO   es[o.s.p.StopWatcher]  Stopping process
+2016.10.08 16:21:50 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] stopping ...
+2016.10.08 16:21:50 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] stopped
+2016.10.08 16:21:50 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] closing ...
+2016.10.08 16:21:50 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] closed
+2016.10.08 16:21:50 INFO  app[o.s.p.m.Monitor] Process[es] is stopped
+2016.10.08 16:21:50 INFO  app[o.s.a.AppFileSystem] Cleaning or creating temp directory D:\01_opensource\programmes\sonarqube-5.6.3\temp
+2016.10.08 16:21:50 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[es]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Xmx1G -Xms256m -Xss256k -Djava.net.preferIPv4Stack=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/search/* org.sonar.search.SearchServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process1259381987042820032properties
+2016.10.08 16:21:51 INFO   es[o.s.p.ProcessEntryPoint]  Starting es
+2016.10.08 16:21:51 INFO   es[o.s.s.EsSettings]  Elasticsearch listening on 127.0.0.1:9001
+2016.10.08 16:21:51 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] version[1.7.5], pid[4860], build[00f95f4/2016-02-02T09:55:30Z]
+2016.10.08 16:21:51 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initializing ...
+2016.10.08 16:21:52 INFO   es[o.e.plugins]  [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:21:52 INFO   es[o.elasticsearch.env]  [sonar-1475914584420] using [1] data paths, mounts [[WORK (D:)]], net usable_space [37.3gb], net total_space [156gb], types [NTFS]
+2016.10.08 16:21:53 WARN   es[o.e.bootstrap]  JNA not found. native methods will be disabled.
+2016.10.08 16:21:54 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initialized
+2016.10.08 16:21:54 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] starting ...
+2016.10.08 16:21:54 INFO   es[o.e.transport]  [sonar-1475914584420] bound_address {inet[/127.0.0.1:9001]}, publish_address {inet[/127.0.0.1:9001]}
+2016.10.08 16:21:54 INFO   es[o.e.discovery]  [sonar-1475914584420] sonarqube/jqvLg5PbSe2Mi7VuLToOrg
+2016.10.08 16:21:57 INFO   es[o.e.cluster.service]  [sonar-1475914584420] new_master [sonar-1475914584420][jqvLg5PbSe2Mi7VuLToOrg][Z_ZW-PC][inet[/127.0.0.1:9001]]{rack_id=sonar-1475914584420}, reason: zen-disco-join (elected_as_master)
+2016.10.08 16:21:57 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] started
+2016.10.08 16:21:57 INFO   es[o.e.gateway]  [sonar-1475914584420] recovered [6] indices into cluster_state
+2016.10.08 16:22:00 INFO  app[o.s.p.m.Monitor] Process[es] is up
+2016.10.08 16:22:00 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[web]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djruby.management.enabled=false -Djruby.compile.invokedynamic=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.server.app.WebServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process1637254932623607531properties
+2016.10.08 16:22:01 INFO  web[o.s.p.ProcessEntryPoint] Starting web
+2016.10.08 16:22:01 INFO  web[o.s.s.a.TomcatContexts] Webapp directory: D:\01_opensource\programmes\sonarqube-5.6.3\web
+2016.10.08 16:22:01 INFO  web[o.a.c.h.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:22:01 INFO  web[o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2016.10.08 16:22:02 INFO  web[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:22:03 INFO  web[o.s.s.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:22:03 INFO  web[o.s.s.d.EmbeddedDatabase] Embedded database started. Data stored in: D:\01_opensource\programmes\sonarqube-5.6.3\data
+2016.10.08 16:22:03 INFO  web[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:22:04 WARN  web[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:22:05 INFO  web[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:22:05 INFO  web[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:22:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin Checkstyle [checkstyle] installed
+2016.10.08 16:22:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin 3D Code Metrics [citymodel] installed
+2016.10.08 16:22:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin Google Analytics [googleanalytics] installed
+2016.10.08 16:22:06 INFO  web[o.s.c.p.PluginInfo] Plugin [l10nzh] defines 'l10nen' as base plugin. This metadata can be removed from manifest of l10n plugins since version 5.2.
+2016.10.08 16:22:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin Chinese Pack [l10nzh] installed
+2016.10.08 16:22:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin PAM [pam] installed
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin 3D Code Metrics / 3.3 / 27dbb43e6fbe0f564b50bb647494280a2eab8a89
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin C# / 5.0 / 17ddb09047940791828dcb70c9e225f006ab11aa
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Checkstyle / 2.4 / abe1e23436ed7b227a3a325cbf12e204a7c90fc9
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Chinese Pack / 1.11
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Git / 1.2 / a713dd64daf8719ba4e7f551f9a1966c62690c17
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Google Analytics / 1.1 / 66356cf41d30a06703477fe435f6e285792b3fba
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Java / 3.13.1 / cf0f0c950ba3e83a87c7fe11c6ff7e63f4864bd9
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin JavaScript / 2.11 / a9b1afa9ceef7079811779d9efc5f8026acb1400
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin PAM / 0.2 / 6158
+2016.10.08 16:22:07 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin SVN / 1.3 / aff503d48bc77b07c2b62abf93249d0a20bd355c
+2016.10.08 16:22:07 INFO  web[o.s.s.p.RailsAppsDeployer] Deploying Ruby on Rails applications
+2016.10.08 16:22:08 INFO  web[o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2016.10.08 16:22:08 INFO  web[o.s.s.n.NotificationService] Notification service started (delay 60 sec.)
+2016.10.08 16:22:08 INFO  web[o.s.s.s.RegisterMetrics] Register metrics
+2016.10.08 16:22:09 INFO  web[o.s.s.r.RegisterRules] Register rules
+2016.10.08 16:22:12 INFO  web[o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2016.10.08 16:22:14 INFO  web[o.s.s.s.RegisterNewMeasureFilters] Register measure filters
+2016.10.08 16:22:14 INFO  web[o.s.s.s.RegisterDashboards] Register dashboards
+2016.10.08 16:22:14 INFO  web[o.s.s.s.RegisterDashboards] Register dashboard: 3D Code Metrics
+2016.10.08 16:22:14 INFO  web[o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2016.10.08 16:22:14 INFO  web[o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2016.10.08 16:22:14 INFO  web[o.s.s.e.IndexerStartupTask] Index activities
+2016.10.08 16:22:14 INFO  web[o.s.s.e.IndexerStartupTask] Index issues
+2016.10.08 16:22:14 INFO  web[o.s.s.e.IndexerStartupTask] Index tests
+2016.10.08 16:22:14 INFO  web[o.s.s.e.IndexerStartupTask] Index users
+2016.10.08 16:22:14 INFO  web[o.s.s.e.IndexerStartupTask] Index views
+2016.10.08 16:22:14 INFO  web[jruby.rack] jruby 1.7.9 (ruby-1.8.7p370) 2013-12-06 87b108a on Java HotSpot(TM) 64-Bit Server VM 1.8.0_66-b18 [Windows 7-amd64]
+2016.10.08 16:22:14 INFO  web[jruby.rack] using a shared (threadsafe!) runtime
+2016.10.08 16:22:30 INFO  web[jruby.rack] keeping custom (config.logger) Rails logger instance
+2016.10.08 16:22:30 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@2a5e59dd [pattern=/sessions/init/*]
+2016.10.08 16:22:30 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@690c110c [pattern=/oauth2/callback/*]
+2016.10.08 16:22:31 INFO  web[o.a.c.h.Http11NioProtocol] Starting ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:22:31 INFO  web[o.s.s.a.TomcatAccessLog] Web server is started
+2016.10.08 16:22:31 INFO  web[o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 8888
+2016.10.08 16:22:31 INFO  app[o.s.p.m.Monitor] Process[web] is up
+2016.10.08 16:22:31 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[ce]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;./lib/ce/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.ce.app.CeServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process490564955448684260properties
+2016.10.08 16:22:34 INFO  ce[o.s.p.ProcessEntryPoint] Starting ce
+2016.10.08 16:22:35 INFO  ce[o.s.ce.app.CeServer] Compute Engine starting up...
+2016.10.08 16:22:35 INFO  ce[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:22:35 INFO  ce[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:22:35 WARN  ce[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:22:37 INFO  ce[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:22:37 INFO  ce[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:22:39 INFO  ce[o.s.c.c.CePluginRepository] Load plugins
+2016.10.08 16:22:39 INFO  ce[o.s.c.p.PluginInfo] Plugin [l10nzh] defines 'l10nen' as base plugin. This metadata can be removed from manifest of l10n plugins since version 5.2.
+2016.10.08 16:22:41 INFO  ce[o.s.s.c.q.PurgeCeActivities] Delete the Compute Engine tasks created before Mon Apr 11 16:22:41 CST 2016
+2016.10.08 16:22:41 INFO  ce[o.s.ce.app.CeServer] Compute Engine is up
+2016.10.08 16:22:41 INFO  app[o.s.p.m.Monitor] Process[ce] is up
+2016.10.08 16:23:10 INFO  web[o.s.s.p.ServerPluginRepository] Uninstalling plugin C# [csharp]
+2016.10.08 16:23:20 INFO  web[o.s.s.p.ServerPluginRepository] Uninstalling plugin SVN [scmsvn]
+2016.10.08 16:23:43 INFO  web[o.s.s.p.w.RestartAction] SonarQube restart requested by admin
+2016.10.08 16:23:44 INFO  app[o.s.p.m.Monitor] Process [web] requested restart
+2016.10.08 16:23:44 INFO  app[o.s.p.m.Monitor] Process[ce] is stopping
+2016.10.08 16:23:44 INFO  ce[o.s.p.StopWatcher] Stopping process
+2016.10.08 16:23:44 INFO  ce[o.s.ce.app.CeServer] Compute Engine shutting down...
+2016.10.08 16:23:45 INFO  app[o.s.p.m.Monitor] Process[ce] is stopped
+2016.10.08 16:23:45 INFO  app[o.s.p.m.Monitor] Process[web] is stopping
+2016.10.08 16:23:45 INFO  web[o.s.p.StopWatcher] Stopping process
+2016.10.08 16:23:45 INFO  web[o.a.c.h.Http11NioProtocol] Pausing ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:23:46 INFO  web[o.s.s.n.NotificationService] Notification service stopped
+2016.10.08 16:23:47 INFO  web[o.s.s.d.EmbeddedDatabase] Embedded database stopped
+2016.10.08 16:23:47 INFO  web[o.a.c.h.Http11NioProtocol] Stopping ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:23:48 INFO  web[o.a.c.h.Http11NioProtocol] Destroying ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:23:48 INFO  web[o.s.s.a.TomcatAccessLog] Web server is stopped
+2016.10.08 16:23:48 INFO  app[o.s.p.m.Monitor] Process[web] is stopped
+2016.10.08 16:23:48 INFO  app[o.s.p.m.Monitor] Process[es] is stopping
+2016.10.08 16:23:49 INFO   es[o.s.p.StopWatcher]  Stopping process
+2016.10.08 16:23:49 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] stopping ...
+2016.10.08 16:23:49 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] stopped
+2016.10.08 16:23:49 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] closing ...
+2016.10.08 16:23:49 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] closed
+2016.10.08 16:23:50 INFO  app[o.s.p.m.Monitor] Process[es] is stopped
+2016.10.08 16:23:50 INFO  app[o.s.a.AppFileSystem] Cleaning or creating temp directory D:\01_opensource\programmes\sonarqube-5.6.3\temp
+2016.10.08 16:23:50 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[es]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Xmx1G -Xms256m -Xss256k -Djava.net.preferIPv4Stack=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/search/* org.sonar.search.SearchServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process5880172646133371200properties
+2016.10.08 16:23:50 INFO   es[o.s.p.ProcessEntryPoint]  Starting es
+2016.10.08 16:23:50 INFO   es[o.s.s.EsSettings]  Elasticsearch listening on 127.0.0.1:9001
+2016.10.08 16:23:51 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] version[1.7.5], pid[4012], build[00f95f4/2016-02-02T09:55:30Z]
+2016.10.08 16:23:51 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initializing ...
+2016.10.08 16:23:51 INFO   es[o.e.plugins]  [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:23:51 INFO   es[o.elasticsearch.env]  [sonar-1475914584420] using [1] data paths, mounts [[WORK (D:)]], net usable_space [37.3gb], net total_space [156gb], types [NTFS]
+2016.10.08 16:23:52 WARN   es[o.e.bootstrap]  JNA not found. native methods will be disabled.
+2016.10.08 16:23:53 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] initialized
+2016.10.08 16:23:53 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] starting ...
+2016.10.08 16:23:53 INFO   es[o.e.transport]  [sonar-1475914584420] bound_address {inet[/127.0.0.1:9001]}, publish_address {inet[/127.0.0.1:9001]}
+2016.10.08 16:23:53 INFO   es[o.e.discovery]  [sonar-1475914584420] sonarqube/SXO6ecADQm6ZSh7YeIvHTA
+2016.10.08 16:23:56 INFO   es[o.e.cluster.service]  [sonar-1475914584420] new_master [sonar-1475914584420][SXO6ecADQm6ZSh7YeIvHTA][Z_ZW-PC][inet[/127.0.0.1:9001]]{rack_id=sonar-1475914584420}, reason: zen-disco-join (elected_as_master)
+2016.10.08 16:23:56 INFO   es[o.elasticsearch.node]  [sonar-1475914584420] started
+2016.10.08 16:23:56 INFO   es[o.e.gateway]  [sonar-1475914584420] recovered [6] indices into cluster_state
+2016.10.08 16:24:00 INFO  app[o.s.p.m.Monitor] Process[es] is up
+2016.10.08 16:24:00 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[web]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djruby.management.enabled=false -Djruby.compile.invokedynamic=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.server.app.WebServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process2383320418708646371properties
+2016.10.08 16:24:00 INFO  web[o.s.p.ProcessEntryPoint] Starting web
+2016.10.08 16:24:01 INFO  web[o.s.s.a.TomcatContexts] Webapp directory: D:\01_opensource\programmes\sonarqube-5.6.3\web
+2016.10.08 16:24:01 INFO  web[o.a.c.h.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:24:01 INFO  web[o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2016.10.08 16:24:02 INFO  web[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:24:02 INFO  web[o.s.s.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:24:03 INFO  web[o.s.s.d.EmbeddedDatabase] Embedded database started. Data stored in: D:\01_opensource\programmes\sonarqube-5.6.3\data
+2016.10.08 16:24:03 INFO  web[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:24:03 WARN  web[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:24:04 INFO  web[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:24:05 INFO  web[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:24:06 INFO  web[o.s.c.p.PluginInfo] Plugin [l10nzh] defines 'l10nen' as base plugin. This metadata can be removed from manifest of l10n plugins since version 5.2.
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin Java [java] updated to version 4.2
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Plugin JavaScript [javascript] updated to version 2.16.0.2922
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin 3D Code Metrics / 3.3 / 27dbb43e6fbe0f564b50bb647494280a2eab8a89
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Checkstyle / 2.4 / abe1e23436ed7b227a3a325cbf12e204a7c90fc9
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Chinese Pack / 1.11
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Git / 1.2 / a713dd64daf8719ba4e7f551f9a1966c62690c17
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Google Analytics / 1.1 / 66356cf41d30a06703477fe435f6e285792b3fba
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin Java / 4.2 / 621b9f31e6947ff16f32bc5a8c35fe90aa0cc530
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin JavaScript / 2.16.0.2922 / 5a8bcaf41ffe1378b347e73a00e03466dfa69d79
+2016.10.08 16:24:06 INFO  web[o.s.s.p.ServerPluginRepository] Deploy plugin PAM / 0.2 / 6158
+2016.10.08 16:24:06 INFO  web[o.s.s.p.RailsAppsDeployer] Deploying Ruby on Rails applications
+2016.10.08 16:24:07 INFO  web[o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2016.10.08 16:24:08 INFO  web[o.s.s.n.NotificationService] Notification service started (delay 60 sec.)
+2016.10.08 16:24:08 INFO  web[o.s.s.s.RegisterMetrics] Register metrics
+2016.10.08 16:24:08 INFO  web[o.s.s.r.RegisterRules] Register rules
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustNotSatisfyLinkDemands
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDecreaseInheritedMemberVisibility
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AutoLayoutTypesShouldNotBeComVisible
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldBeSpelledCorrectly
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S125
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S126
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S121
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S122
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S127
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewSqlQueriesForSecurityVulnerabilities
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S134
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S131
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:VariableNamesShouldNotMatchFieldNames
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:InstantiateArgumentExceptionsCorrectly
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2930
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2931
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2933
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldHaveCorrectPrefix
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDisposeObjectsMultipleTimes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2934
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MovePInvokesToNativeMethodsClass
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1848
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldHaveCorrectSuffix
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:FinalizersShouldBeProtected
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotRaiseExceptionsInExceptionClauses
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDeclareReadOnlyMutableReferenceTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CallBaseClassMethodsOnISerializableTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SpecifyMarshalingForPInvokeStringArguments
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CollectionPropertiesShouldBeReadOnly
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseEventsWhereAppropriate
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkComSourceInterfacesAsIDispatch
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CollectionsShouldImplementGenericInterface
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAssembliesWithAssemblyVersion
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverrideLinkDemandsShouldBeIdenticalToBase
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypeNamesShouldNotMatchNamespaces
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewMisleadingFieldNames
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1318
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CriticalTypesMustNotParticipateInTypeEquivalence
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SpecifyMessageBoxOptions
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2743
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1656
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PInvokeEntryPointsShouldExist
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ConstantsShouldBeTransparent
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:CycleBetweenPackages
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DeclareEventHandlersCorrectly
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1659
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2995
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverloadOperatorEqualsOnOverloadingAddAndSubtract
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2996
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2997
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverrideMethodsOnComparableTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2757
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ListsAreStronglyTyped
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkMembersAsStatic
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:EventsShouldNotHaveBeforeOrAfterPrefix
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2758
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ComVisibleTypesShouldBeCreatable
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2761
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DefaultConstructorsMustHaveConsistentTransparency
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseIntegralOrStringArgumentForIndexers
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2760
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidExcessiveInheritance
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:RemoveUnusedLocals
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkWindowsFormsEntryPointsWithStaThread
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1449
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1854
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MembersShouldNotExposeCertainConcreteTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:GenericMethodsShouldProvideTypeParameter
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReplaceRepetitiveArgumentsWithParamsArray
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DisposableTypesShouldDeclareFinalizer
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1858
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1724
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverrideGetHashCodeOnOverridingEquals
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1862
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2952
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2953
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2955
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SecurityTransparentCodeShouldNotAssert
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotIndirectlyExposeMethodsWithLinkDemands
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidExcessiveParametersOnGenericTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1871
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DisposeObjectsBeforeLosingScope
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewDenyAndPermitOnlyUsage
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldNotContainTypeNames
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1701
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2971
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1643
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustNotHandleProcessCorruptingExceptions
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidExcessiveLocals
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2737
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidNonpublicFieldsInComVisibleValueTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UriPropertiesShouldNotBeStrings
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1134
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2223
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1135
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PInvokesShouldNotBeSafeCriticalFxCopRule
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2225
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S907
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2228
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PointersShouldNotBeVisible
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CallGCKeepAliveWhenUsingNativeResources
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotPassLiteralsAsLocalizedParameters
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewSuppressUnmanagedCodeSecurityUsage
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1144
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1145
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2234
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OnlyFlagsEnumsShouldHavePluralNames
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2486
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1155
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S927
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IndexersShouldNotBeMultidimensional
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SealMethodsThatSatisfyPrivateInterfaces
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotMarkServicedComponentsWithWebMethod
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MethodSecurityShouldBeASupersetOfType
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:StaticHolderTypesShouldNotHaveConstructors
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AptcaTypesShouldOnlyExtendAptcaBaseTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidUncalledPrivateCode
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:EnumeratorsShouldBeStronglyTyped
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SecureSerializationConstructors
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDeclareProtectedMembersInSealedTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ArrayFieldsShouldNotBeReadOnly
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2674
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypesShouldNotExtendCertainBaseTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2437
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotCatchGeneralExceptionTypes
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotUseIdleProcessPriority
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotNestGenericTypesInMemberSignatures
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SpecifyIFormatProvider
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1109
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3532
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1116
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1117
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1118
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2681
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:RethrowToPreserveStackDetails
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseGenericsWhereAppropriate
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ValueTypeFieldsShouldBePortable
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2696
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1125
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsShouldNotLoadAssembliesFromByteArrays
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:FinalizersShouldCallBaseClassFinalizer
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CallGetLastErrorImmediatelyAfterPInvoke
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2692
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DefineAccessorsForAttributeArguments
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1121
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAssembliesWithClsCompliant
+2016.10.08 16:24:11 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:LowerCaseLongSuffixCheck
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2219
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotCastUnnecessarily
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CompoundWordsShouldBeCasedCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3397
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ImplementSerializationMethodsCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2070
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotHideBaseClassMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3169
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3168
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PInvokesShouldNotBeVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UriParametersShouldNotBeStrings
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypesThatOwnDisposableFieldsShouldBeDisposable
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustNotReferenceCriticalCode
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotUseTimersThatPreventPowerStateChanges
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldNotMatchKeywords
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TestForEmptyStringsUsingStringLength
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3172
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidStaticMembersInComVisibleTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DeclareTypesInNamespaces
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:WrapVulnerableFinallyClausesInOuterTry
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidNamespacesWithFewTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1294
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1172
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidUnusedPrivateFields
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MethodsMustOverrideWithConsistentTransparency
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidInt64ArgumentsForVB6Clients
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2278
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotTreatFibersAsThreads
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:StaticConstructorsShouldBePrivate
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustNotCallSuppressUnmanagedCodeSecurityMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1185
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypesThatOwnNativeResourcesShouldBeDisposable
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2275
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1186
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SetLocaleForDataTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotExposeGenericLists
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotMarkEnumsWithFlags
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidOverloadsInComVisibleInterfaces
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3376
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SecurityRuleSetLevel2MethodsShouldNotBeProtectedWithLinkDemands
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2290
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotRaiseReservedExceptionTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldNotHaveIncorrectPrefix
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotHardcodeLocaleSpecificStrings
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2291
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2292
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AptcaMethodsShouldOnlyCallAptcaMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S103
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S104
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S101
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S100
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S107
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S108
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S105
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PInvokeDeclarationsShouldBePortable
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewImperativeSecurity
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidCallingProblematicMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SecuredTypesShouldNotExposeFields
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:InsufficientCommentDensity
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:FailedUnitTests
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1939
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1940
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidEmptyInterfaces
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ResourceStringsShouldBeSpelledCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1944
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverloadOperatorEqualsOnOverridingValueTypeEquals
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DisposableFieldsShouldBeDisposed
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsShouldNotBeProtectedWithLinkDemands
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DeclarePInvokesCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:SkippedUnitTests
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseParamsForVariableArguments
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAssembliesWithComVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1873
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotOverloadOperatorEqualsOnReferenceTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotShipUnreleasedResourceFormats
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CustomRuleTemplate
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MembersShouldDifferByMoreThanReturnType
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypesMustBeAtLeastAsCriticalAsBaseTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ParameterNamesShouldNotMatchMemberNames
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UsePreferredTerms
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1905
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:StringUriOverloadsCallSystemUriOverloads
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ConsiderPassingBaseTypesAsParameters
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsShouldNotDemand
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UsePropertiesWhereAppropriate
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:DuplicatedBlocks
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:UnusedProtectedMethod
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ComRegistrationMethodsShouldBeMatched
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparencyAnnotationsShouldNotConflict
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidUnmantainableCode
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1541
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidUninstantiatedInternalClasses
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1301
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1313
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:LiteralsShouldBeSpelledCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ImplementIDisposableCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:NonConstantFieldsShouldNotBeVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDeclareVirtualMembersInSealedTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseOrdinalStringComparison
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OperatorOverloadsHaveNamedAlternates
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkBooleanPInvokeArgumentsWithMarshalAs
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CatchNonClsCompliantExceptionsInGeneralHandlers
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseManagedEquivalentsOfWin32Api
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:S1848
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustNotCallNativeCode
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:RemoveCallsToGCKeepAlive
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotCallOverridableMethodsInConstructors
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AttributeStringLiteralsShouldParseCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:FlagsEnumsShouldHavePluralNames
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotIgnoreMethodResults
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDeclareVisibleInstanceFields
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotRaiseExceptionsInUnexpectedLocations
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldDifferByMoreThanCase
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1994
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ExceptionsShouldBePublic
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:NestedTypesShouldNotBeVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:RemoveEmptyFinalizers
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1764
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldNotHaveIncorrectSuffix
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ImplementISerializableCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidDuplicateAccelerators
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewVisibleEventHandlers
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidUnsealedAttributes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2344
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2345
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2346
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DisposeMethodsShouldCallBaseClassDispose
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkISerializableTypesWithSerializable
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TypeLinkDemandsRequireInheritanceDemands
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:InitializeValueTypeStaticFieldsInline
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:StaticHolderTypesShouldBeSealed
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3444
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3443
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2357
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3447
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3449
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAllNonSerializableFields
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotDeclareStaticMembersOnGenericTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3441
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ValidateArgumentsOfPublicMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2123
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3215
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3457
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3456
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2368
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3217
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3216
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3218
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2360
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3451
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3450
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2376
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3466
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ComVisibleTypeBaseTypesShouldBeComVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S818
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2372
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3220
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1694
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule squid:StringEqualityComparisonCheck
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:InterfaceMethodsShouldBeCallableByChildTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1697
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1698
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1699
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2306
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverrideEqualsAndOperatorEqualsOnValueTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SpecifyStringComparison
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1226
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1227
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ParameterNamesShouldMatchBaseDeclaration
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2551
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PropertiesShouldNotReturnArrays
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TransparentMethodsMustBeVerifiable
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAttributesWithAttributeUsage
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CallGCSuppressFinalizeCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1479
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2326
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidExcessiveClassCoupling
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkAssembliesWithNeutralResourcesLanguage
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2328
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ComRegistrationMethodsShouldNotBeVisible
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotPrefixEnumValuesWithTypeName
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldBeCasedCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SecureAsserts
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1244
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2333
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1006
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3427
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2339
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1481
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2330
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidExcessiveComplexity
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DefaultParametersShouldNotBeUsed
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:EnumsShouldHaveZeroValue
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OperatorsShouldHaveSymmetricalOverloads
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotUseAutoDualClassInterfaceType
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PreferJaggedArraysOverMultidimensional
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseLiteralsWhereAppropriate
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AssembliesShouldHaveValidStrongNames
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2184
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotPassTypesByReference
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:InitializeReferenceTypeStaticFieldsInline
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ImplementStandardExceptionConstructors
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:InsufficientBranchCoverage
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AvoidOutParameters
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PropertiesShouldNotBeWriteOnly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2197
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:EnumStorageShouldBeInt32
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ImplementSerializationConstructors
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3052
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewUnusedParameters
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OperationsShouldNotOverflow
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule common-cs:InsufficientLineCoverage
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:TestForNaNCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:AbstractTypesShouldNotHaveConstructors
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:IdentifiersShouldNotContainUnderscores
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S2387
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3235
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3234
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3237
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3236
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UriReturnValuesShouldNotBeStrings
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseGenericEventHandlerInstances
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PassSystemUriObjectsInsteadOfStrings
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:SpecifyCultureInfo
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:PropertyNamesShouldNotMatchGetMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ProvideObsoleteAttributeMessage
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ICollectionImplementationsHaveStronglyTypedMembers
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DelegatesMustBindWithConsistentTransparency
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:CA2151
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1067
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3246
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3005
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3249
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ResourceStringCompoundWordsShouldBeCasedCorrectly
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3240
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3244
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S1066
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:OverrideEqualsOnOverloadingOperatorEquals
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:NormalizeStringsToUppercase
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3257
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ProvideCorrectArgumentsToFormattingMethods
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3251
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ProvideDeserializationMethodsForOptionalFields
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3253
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotLockOnObjectsWithWeakIdentity
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:DoNotNameEnumValuesReserved
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3254
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseSafeHandleToEncapsulateNativeResources
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:ReviewDeclarativeSecurityOnValueTypes
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:MarkEnumsWithFlags
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3262
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3263
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule csharpsquid:S3265
+2016.10.08 16:24:12 INFO  web[o.s.s.r.RegisterRules] Disable rule fxcop:UseOnlyApiFromTargetedFramework
+2016.10.08 16:24:15 INFO  web[o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2016.10.08 16:24:16 INFO  web[o.s.s.s.RegisterNewMeasureFilters] Register measure filters
+2016.10.08 16:24:16 INFO  web[o.s.s.s.RegisterDashboards] Register dashboards
+2016.10.08 16:24:16 INFO  web[o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2016.10.08 16:24:16 INFO  web[o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2016.10.08 16:24:16 INFO  web[o.s.s.e.IndexerStartupTask] Index activities
+2016.10.08 16:24:16 INFO  web[o.s.s.e.IndexerStartupTask] Index issues
+2016.10.08 16:24:16 INFO  web[o.s.s.e.IndexerStartupTask] Index tests
+2016.10.08 16:24:16 INFO  web[o.s.s.e.IndexerStartupTask] Index users
+2016.10.08 16:24:16 INFO  web[o.s.s.e.IndexerStartupTask] Index views
+2016.10.08 16:24:17 INFO  web[jruby.rack] jruby 1.7.9 (ruby-1.8.7p370) 2013-12-06 87b108a on Java HotSpot(TM) 64-Bit Server VM 1.8.0_66-b18 [Windows 7-amd64]
+2016.10.08 16:24:17 INFO  web[jruby.rack] using a shared (threadsafe!) runtime
+2016.10.08 16:24:29 INFO  web[jruby.rack] keeping custom (config.logger) Rails logger instance
+2016.10.08 16:24:29 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@d1d63c0 [pattern=/sessions/init/*]
+2016.10.08 16:24:29 INFO  web[o.s.s.p.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@5b29b91c [pattern=/oauth2/callback/*]
+2016.10.08 16:24:29 INFO  web[o.a.c.h.Http11NioProtocol] Starting ProtocolHandler ["http-nio-0.0.0.0-8888"]
+2016.10.08 16:24:29 INFO  web[o.s.s.a.TomcatAccessLog] Web server is started
+2016.10.08 16:24:29 INFO  web[o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 8888
+2016.10.08 16:24:29 INFO  app[o.s.p.m.Monitor] Process[web] is up
+2016.10.08 16:24:29 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[ce]: C:\Program Files\Java\jdk1.8.0_66\jre\bin\java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true -Djava.io.tmpdir=D:\01_opensource\programmes\sonarqube-5.6.3\temp -javaagent:C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar -cp ./lib/common/*;./lib/server/*;./lib/ce/*;D:\01_opensource\programmes\sonarqube-5.6.3\lib\jdbc\h2\h2-1.3.176.jar org.sonar.ce.app.CeServer D:\01_opensource\programmes\sonarqube-5.6.3\temp\sq-process551797800873376329properties
+2016.10.08 16:24:31 INFO  ce[o.s.p.ProcessEntryPoint] Starting ce
+2016.10.08 16:24:31 INFO  ce[o.s.ce.app.CeServer] Compute Engine starting up...
+2016.10.08 16:24:32 INFO  ce[o.s.s.p.ServerImpl] SonarQube Server / 5.6.3 / 3fcc98a73d6afb99388e39f46272909a6d6600b2
+2016.10.08 16:24:32 INFO  ce[o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://localhost:9092/sonar
+2016.10.08 16:24:32 WARN  ce[o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only
+2016.10.08 16:24:33 INFO  ce[o.s.s.p.DefaultServerFileSystem] SonarQube home: D:\01_opensource\programmes\sonarqube-5.6.3
+2016.10.08 16:24:33 INFO  ce[o.e.plugins] [sonar-1475914584420] loaded [], sites []
+2016.10.08 16:24:34 INFO  ce[o.s.c.c.CePluginRepository] Load plugins
+2016.10.08 16:24:34 INFO  ce[o.s.c.p.PluginInfo] Plugin [l10nzh] defines 'l10nen' as base plugin. This metadata can be removed from manifest of l10n plugins since version 5.2.
+2016.10.08 16:24:36 INFO  ce[o.s.s.c.q.PurgeCeActivities] Delete the Compute Engine tasks created before Mon Apr 11 16:24:36 CST 2016
+2016.10.08 16:24:36 INFO  ce[o.s.ce.app.CeServer] Compute Engine is up
+2016.10.08 16:24:36 INFO  app[o.s.p.m.Monitor] Process[ce] is up
+CTRL-C trapped.  Shutting down.
+CTRL-C trapped.  Forcing immediate shutdown.
+JVM did not exit on request, terminated
+CTRL-C trapped.  Forcing immediate shutdown.
+CTRL-C trapped.  Forcing immediate shutdown.
+CTRL-C trapped.  Forcing immediate shutdown.
+<-- Wrapper Stopped
